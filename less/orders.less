@@ -1,0 +1,146 @@
+// MOBILE
+.media-mixin(@break) when (@break = @mobile) {
+    #top-orders {
+      margin-left: 8%;
+      display: flex;
+      justify-content: space-between;
+      width: 84%;
+      margin-top: 32px;
+      border-bottom: 1px solid @bordergray;
+    }
+    .orders-title {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: @text-title;
+      padding-bottom: 8px;
+      border-bottom: solid 4px @bg-primary;
+    }
+    .orders-btn {
+      button {
+        font-family: "Lato";
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: @text-title;
+        border: 2px solid @bg-primary;
+        background-color: white;
+      }
+    }
+    #orders-list {
+      margin-left: 8%;
+      margin-right: 8%;
+      margin-top: 16px;
+      h2 {
+        font-size: 24px;
+        font-family: @lato;
+        color: @text-title;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      #table-head {
+        display: none;
+      }
+      .table-row {
+        display: flex;
+        font-family: @lato;
+        margin-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #f0f1f2;
+        &:nth-child(1) {
+          margin-top: 20px;
+        }
+        .bold {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: @text-primary;
+        }
+        .light {
+          font-size: 1.4rem;
+          font-weight: lighter;
+          color: @text-primary;
+        }
+        .table-left {
+          width: 50%;
+        }
+        .table-right {
+          width: 40%;
+        }
+        .table-date,
+        .table-status {
+          margin-top: 8px;
+        }
+        .table-id {
+          display: none;
+        }
+      }
+      .table-btn {
+        width: 20%;
+        color: text-title;
+        border: 2px solid @bg-primary;
+      }
+    }
+  }
+  
+  // TABLET
+  .media-mixin(@break) when (@break = @tablet) {
+    #orders-list {
+      #table-head, .table-row {
+        display: flex;
+        .table-left .row {
+          padding-left: 20%;
+          &:nth-child(1) {
+            padding-left: 0px;
+            font-weight: bold;
+          }
+        }
+        .table-right .row {
+          padding-left: 30%;
+          &:nth-child(1) {
+            padding-left: 10%;
+          }
+        }
+        .bold, .light {
+          font-size: 1.6rem;
+          font-weight: lighter;
+        }
+        .table-date, .table-status {
+          margin-top: 0px;
+        }
+        .table-id {
+          display: block;
+        }
+        .table-left {
+          display: flex;
+          width: 50%;
+        }
+        .table-right {
+          width: 40%;
+          display: flex;
+        }
+        .table-btn {
+          max-width: 72px;
+          max-height: 32px;
+        }
+      }
+  }
+  
+  // LAPTOP
+  .media-mixin(@break) when (@break = @laptop) {
+    #container {
+      margin-left: 200px;
+    }
+    #orders-list {
+      .table-right .row {
+        padding-left: 20%;
+        &:nth-child(1) {
+          padding-left: 10%x;
+        }
+      }
+    }
+  }
+}
+  

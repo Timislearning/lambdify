@@ -7,6 +7,20 @@
 
 @import "navbar.less";
 @import "sidebar.less";
-// @import "overview.less";
-// @import "orders.less";
+@import "overview.less";
+@import "orders.less";
 // @import "footer.less";
+
+// STYLE
+
+.media-mixin(@break) when (@break = @laptop) {
+    body {
+      background-color: @bg-secondary;
+    }
+  }
+  
+  .media-mixin(@break) when (@break = @laptop) {
+    #container {
+      margin-left: 200px;
+    }
+  }
