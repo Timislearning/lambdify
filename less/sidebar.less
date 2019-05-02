@@ -1,0 +1,46 @@
+.media-mixin(@break) when (@break = @mobile) {
+    #sidebar {
+      display: none;
+    }
+  }
+  
+  .media-mixin(@break) when (@break = @laptop) {
+    #sidebar {
+      display: block;
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      top: 56px;
+      background-color: @bg-tertiary;
+      border-right: 1px solid @bordergray;
+    }
+    .sidebar-list {
+      list-style-type: none;
+      color: @text-primary;
+      margin-top: 32px;
+      li {
+        margin-bottom: 20px;
+        margin-left: 40px;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+    .sidebar-logout {
+      position: fixed;
+      bottom: 0px;
+      width: 200px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      color: @text-primary;
+      border-top: 1px solid @bordergray;
+      border-right: 1px solid @bordergray;
+      &:hover {
+        font-weight: bold;
+      }
+      h5 {
+        padding-left: 40px;
+      }
+    }
+  }
+  
